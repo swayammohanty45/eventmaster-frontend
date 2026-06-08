@@ -15,7 +15,7 @@ API.interceptors.response.use(res => res, async err => {
     const refresh = localStorage.getItem('refresh');
     if (refresh) {
       try {
-        const { data } = await axios.post('/api/auth/refresh/', { refresh });
+        const { data } = await axios.post('https://web-production-f37d0c.up.railway.app/api/auth/refresh/', { refresh });
         localStorage.setItem('access', data.access);
         err.config.headers.Authorization = `Bearer ${data.access}`;
         return axios(err.config);
