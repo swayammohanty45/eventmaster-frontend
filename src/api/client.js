@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({ 
-  baseURL: 'https://web-production-f37d0c.up.railway.app/api'
+  baseURL: 'https://eventmaster-backend-iqov.onrender.com/api'
 });
 
 API.interceptors.request.use(config => {
